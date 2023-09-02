@@ -5,11 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Infrastructure.Gateway.Extensions
 {
-	public static class Dependencies
-	{
+	public static class ServiceColletionExtensions
+    {
 		public static IServiceCollection AddInfrastructureDependencies(this IServiceCollection service)
 		{
-			service.AddScoped<ICountryClient, CountryClient>();
+			service.AddScoped<IPagerDutyClient, PagerDutyClient>();
 
 			return service;
 		}

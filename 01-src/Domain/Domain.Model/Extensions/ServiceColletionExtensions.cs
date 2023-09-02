@@ -6,11 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Domain.Extensions
 {
-    public static class Dependencies
+    public static class ServiceColletionExtensions
     {
         public static IServiceCollection AddDomainDependencies(this IServiceCollection service)
         {
-            service.AddScoped<ICountryService, CountryService>();
+            service.AddScoped<IPagerDutyService, PagerDutyService>();
 
             return service;
         }

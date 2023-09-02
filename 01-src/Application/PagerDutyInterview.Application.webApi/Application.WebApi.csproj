@@ -14,10 +14,12 @@
   <ItemGroup>
     <None Remove="Controllers\v1\" />
     <None Remove="Extensions\" />
+    <None Remove="Middleware\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\v1\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Middleware\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\Infrastructure.Gateway\Infrastructure.Gateway.csproj">
