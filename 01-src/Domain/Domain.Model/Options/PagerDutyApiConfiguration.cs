@@ -2,9 +2,9 @@
 {
     public class PagerDutyApiConfiguration
 	{
-		public string AddressUri { get; set; }
+		public string AddressUri { get; set; } = string.Empty;
 
-		public string AccessKey { get; set; }
-	}
+		public string AccessKey { get; set; } = string.Empty;
+    }
 }
 

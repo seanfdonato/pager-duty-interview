@@ -17,9 +17,9 @@ namespace Application.WebApi.Controllers.v1
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] string param1, [FromQuery] string param2)
+        public async Task<IActionResult> Get([FromQuery] int limit, [FromQuery] int offset)
         {
-            var result = param1;
+            var result = await _service.GetUserAsync(limit, offset);
 
             if(result is not null)
             {
@@ -31,9 +31,9 @@ namespace Application.WebApi.Controllers.v1
 
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> Get(string id)
         {
-            var result = id;
+            var result = await _service.GetUserContact(id);
 
             if (result != default)
             {
